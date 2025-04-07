@@ -2,7 +2,8 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Exercices Interactifs Complets</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ensemble d'Exercices - Mathématiques</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -35,14 +36,6 @@
             padding: 15px;
             background-color: #f9f9f9;
             border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .exercise > span {
-            margin-left: auto;
-            margin-right: 0;
         }
 
         input {
@@ -111,19 +104,6 @@
             text-align: center;
         }
 
-        #prize-message {
-            margin-top: 15px;
-            font-weight: bold;
-            color: #218838;
-            text-align: center;
-            font-size: 1.2em;
-        }
-
-        #main-content {
-            flex: 1;
-            padding-bottom: 20px;
-        }
-
         footer {
             background-color: #34495e;
             color: white;
@@ -132,249 +112,86 @@
             margin-top: 20px;
             border-top: 1px solid #2c3e50;
         }
-
-        @media (max-width: 768px) {
-            .container {
-                width: 100%;
-                padding: 10px;
-            }
-            input {
-                width: 100%;
-                margin-left: 0;
-                margin-top: 10px;
-            }
-            .exercise {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .exercise > span {
-                margin-left: 0;
-            }
-        }
-
-        .figure {
-            border: 2px solid #e91e63;
-            padding: 10px;
-            margin: 15px auto;
-            border-radius: 8px;
-            background-color: #fde0e7;
-            width: fit-content;
-            text-align: center;
-        }
-
-        .figure img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-        }
-
-        .figure figcaption {
-            margin-top: 5px;
-            font-style: italic;
-            color: #c2185b;
-        }
     </style>
 </head>
 <body>
-    <h1 class="mt-4">Exercices Interactifs - 50 Questions</h1>
+    <h1>Ensemble d'Exercices - Mathématiques (5e année)</h1>
 
-    <div id="main-content">
-        <div class="container">
-            <div class="section">
-                <h2>Section 1 : Addition et Soustraction</h2>
-                <p>Résous les problèmes d'addition et de soustraction suivants.</p>
-                <div class="exercise">1. 15 + 8 = <input type="text" id="s1_1"><span class="feedback"></span></div>
-                <div class="exercise">2. 23 - 12 = <input type="text" id="s1_2"><span class="feedback"></span></div>
-                <div class="exercise">3. 9 + 17 = <input type="text" id="s1_3"><span class="feedback"></span></div>
-                <div class="exercise">4. 30 - 14 = <input type="text" id="s1_4"><span class="feedback"></span></div>
-                <div class="exercise">5. 21 + 9 = <input type="text" id="s1_5"><span class="feedback"></span></div>
-                <div class="exercise">6. 45 - 20 = <input type="text" id="s1_6"><span class="feedback"></span></div>
-                <div class="exercise">7. 16 + 24 = <input type="text" id="s1_7"><span class="feedback"></span></div>
-                <div class="exercise">8. 52 - 31 = <input type="text" id="s1_8"><span class="feedback"></span></div>
-                <div class="exercise">9. 28 + 13 = <input type="text" id="s1_9"><span class="feedback"></span></div>
-                <div class="exercise">10. 60 - 25 = <input type="text" id="s1_10"><span class="feedback"></span></div>
-            </div>
-
-            <div class="section">
-                <h2>Section 2 : Multiplication et Division</h2>
-                <p>Résous les problèmes de multiplication et de division suivants.</p>
-                <div class="exercise">1. 6 × 4 = <input type="text" id="s2_1"><span class="feedback"></span></div>
-                <div class="exercise">2. 35 ÷ 7 = <input type="text" id="s2_2"><span class="feedback"></span></div>
-                <div class="exercise">3. 8 × 3 = <input type="text" id="s2_3"><span class="feedback"></span></div>
-                <div class="exercise">4. 24 ÷ 4 = <input type="text" id="s2_4"><span class="feedback"></span></div>
-                <div class="exercise">5. 5 × 9 = <input type="text" id="s2_5"><span class="feedback"></span></div>
-                <div class="exercise">6. 40 ÷ 8 = <input type="text" id="s2_6"><span class="feedback"></span></div>
-                <div class="exercise">7. 7 × 6 = <input type="text" id="s2_7"><span class="feedback"></span></div>
-                <div class="exercise">8. 63 ÷ 9 = <input type="text" id="s2_8"><span class="feedback"></span></div>
-                <div class="exercise">9. 11 × 4 = <input type="text" id="s2_9"><span class="feedback"></span></div>
-                <div class="exercise">10. 90 ÷ 10 = <input type="text" id="s2_10"><span class="feedback"></span></div>
-            </div>
-
-            <div class="section">
-                <h2>Section 3 : Fractions</h2>
-                <p>Résous les problèmes de fractions suivants.</p>
-                <div class="exercise">1. 1/3 + 2/3 = <input type="text" id="s3_1"><span class="feedback"></span></div>
-                <div class="exercise">2. 3/4 - 1/4 = <input type="text" id="s3_2"><span class="feedback"></span></div>
-                <div class="exercise">3. 2/5 + 1/2 = <input type="text" id="s3_3"><span class="feedback"></span></div>
-                <div class="exercise">4. 5/6 - 1/3 = <input type="text" id="s3_4"><span class="feedback"></span></div>
-                <div class="exercise">5. 1/4 + 3/8 = <input type="text" id="s3_5"><span class="feedback"></span></div>
-                <div class="exercise">6. 7/8 - 1/2 = <input type="text" id="s3_6"><span class="feedback"></span></div>
-                <div class="exercise">7. 2/3 + 1/6 = <input type="text" id="s3_7"><span class="feedback"></span></div>
-                <div class="exercise">8. 4/5 - 2/10 = <input type="text" id="s3_8"><span class="feedback"></span></div>
-                <div class="exercise">9. 1/2 + 1/3 + 1/6 = <input type="text" id="s3_9"><span class="feedback"></span></div>
-                <div class="exercise">10. 9/10 - 2/5 - 1/10 = <input type="text" id="s3_10"><span class="feedback"></span></div>
-            </div>
-
-            <div class="section">
-                <h2>Section 4 : Algèbre de base</h2>
-                <p>Résous les équations suivantes pour x.</p>
-                <div class="exercise">1. x + 7 = 12 <input type="text" id="s4_1"><span class="feedback"></span></div>
-                <div class="exercise">2. x - 5 = 8 <input type="text" id="s4_2"><span class="feedback"></span></div>
-                <div class="exercise">3. 3x = 18 <input type="text" id="s4_3"><span class="feedback"></span></div>
-                <div class="exercise">4. x / 2 = 9 <input type="text" id="s4_4"><span class="feedback"></span></div>
-                <div class="exercise">5. 2x + 3 = 11 <input type="text" id="s4_5"><span class="feedback"></span></div>
-                <div class="exercise">6. 4x - 1 = 15 <input type="text" id="s4_6"><span class="feedback"></span></div>
-                <div class="exercise">7. x / 3 + 2 = 6 <input type="text" id="s4_7"><span class="feedback"></span></div>
-                <div class="exercise">8. 5x - 7 = 23 <input type="text" id="s4_8"><span class="feedback"></span></div>
-                <div class="exercise">9. 10 - x = 4 <input type="text" id="s4_9"><span class="feedback"></span></div>
-                <div class="exercise">10. x / 4 + 3 = 7 <input type="text" id="s4_10"><span class="feedback"></span></div>
-            </div>
-
-            <div class="section">
-                <h2>Section 5 : Géométrie de base</h2>
-                <p>Calcule l'aire ou le périmètre des figures suivantes.</p>
-                <div class="exercise">1. Rectangle : Longueur = 6, Largeur = 4, Aire = ? <input type="text" id="s5_1"><span class="feedback"></span></div>
-                <div class="exercise">2. Carré : Côté = 5, Périmètre = ? <input type="text" id="s5_2"><span class="feedback"></span></div>
-                <div class="exercise">3. Triangle : Base = 8, Hauteur = 6, Aire = ? <input type="text" id="s5_3"><span class="feedback"></span></div>
-                <div class="exercise">4. Cercle : Rayon = 4, Circonférence = ? <input type="text" id="s5_4"><span class="feedback"></span></div>
-                <div class="exercise">5. Rectangle : Longueur = 10, Largeur = 3, Aire = ? <input type="text" id="s5_5"><span class="feedback"></span></div>
-                <div class="exercise">6. Carré : Côté = 7, Périmètre = ? <input type="text" id="s5_6"><span class="feedback"></span></div>
-                <div class="exercise">7. Triangle : Base = 12, Hauteur = 5, Aire = ? <input type="text" id="s5_7"><span class="feedback"></span></div>
-                <div class="exercise">8. Cercle : Rayon = 2, Circonférence = ? <input type="text" id="s5_8"><span class="feedback"></span></div>
-                <div class="exercise">9. Rectangle : Longueur = 11, Largeur = 4, Aire = ? <input type="text" id="s5_9"><span class="feedback"></span></div>
-                <div class="exercise">10. Carré : Côté = 9, Périmètre = ? <input type="text" id="s5_10"><span class="feedback"></span></div>
-            </div>
-
-            <figure class="figure">
-                <img src="https://placehold.co/200x150/e91e63/ffffff?text=Maths&font=Montserrat" alt="Math Symbol">
-                <figcaption>Une figure représentant les mathématiques</figcaption>
-            </figure>
-
-            <button onclick="checkAll()">Vérifier toutes les réponses</button>
-
-            <div id="score-container"></div>
-            <div id="prize-message"></div>
+    <div class="container">
+        <!-- Section 16: Chaînes d'opérations et ordre des opérations -->
+        <div class="section">
+            <h2>Section 16 : Chaînes d'opérations et ordre des opérations</h2>
+            <p>Utilise la règle PEMDAS pour résoudre. Montre tes étapes !</p>
+            <div class="exercise">1. 7 + (3 × 5) − 6 = <input type="text" id="ex16_1"></div>
+            <div class="exercise">2. 15 − 4 × (3 + 2) = <input type="text" id="ex16_2"></div>
+            <div class="exercise">3. (12 + 4) ÷ 4 + 8 = <input type="text" id="ex16_3"></div>
+            <div class="exercise">4. 9 × 2 − 20 ÷ 4 = <input type="text" id="ex16_4"></div>
+            <div class="exercise">5. (5 × 3 + 2) − 8 = <input type="text" id="ex16_5"></div>
+            <div class="exercise">6. 24 ÷ (4 + 3) × 5 = <input type="text" id="ex16_6"></div>
+            <div class="exercise">7. 9 + 4 × (5 − 2) = <input type="text" id="ex16_7"></div>
+            <div class="exercise">8. 12 − 6 × 3 + 18 ÷ 9 = <input type="text" id="ex16_8"></div>
+            <div class="exercise">9. (20 ÷ 5 + 3) × 4 = <input type="text" id="ex16_9"></div>
+            <div class="exercise">10. 8 × (4 + 3) − 15 ÷ 5 = <input type="text" id="ex16_10"></div>
         </div>
+
+        <!-- Section 17: Associativité, Commutativité, Propriété Distributive -->
+        <div class="section">
+            <h2>Section 17 : Associativité, Commutativité et Propriété Distributive</h2>
+            <p>Identifie ou applique les propriétés demandées.</p>
+            <div class="exercise">1. Réécris en utilisant la propriété distributive : 6 × (5 + 3) = <input type="text" id="ex17_1"></div>
+            <div class="exercise">2. Montre la propriété commutative : 6 + 4 + 2 = ___ + ___ + ___</div>
+            <div class="exercise">3. Utilise la propriété associative : (3 × 4) × 2 = ___ × (___ × ___)</div>
+            <div class="exercise">4. 5 × (6 + 7) = (___ × ) + ( × ___)</div>
+            <div class="exercise">5. 14 + 7 + 10 = ___ + ___ + ___ (réorganise)</div>
+            <div class="exercise">6. (8 × 3) × 6 = ___ × (___ × ___)</div>
+            <div class="exercise">7. 5 × (9 − 4) = (___ × ) − ( × ___)</div>
+            <div class="exercise">8. Identifie : (6 + 7) + 3 = 6 + (7 + 3) (Quelle propriété ?)</div>
+            <div class="exercise">9. Identifie : 4 × 7 × 5 = 7 × 5 × 4 (Quelle propriété ?)</div>
+            <div class="exercise">10. 3 × (8 + 5) = (___ × ) + ( × ___) =</div>
+        </div>
+
+        <!-- Section 18: Multiplication des nombres décimaux -->
+        <div class="section">
+            <h2>Section 18 : Multiplication des nombres décimaux</h2>
+            <p>Multiplie, puis place la virgule selon le nombre total de chiffres après la virgule. Estime d’abord si demandé.</p>
+            <div class="exercise">1. 4,1 × 3,2 = <input type="text" id="ex18_1"></div>
+            <div class="exercise">2. 1,8 × 3,4 = <input type="text" id="ex18_2"></div>
+            <div class="exercise">3. 0,6 × 0,9 = <input type="text" id="ex18_3"></div>
+            <div class="exercise">4. 7,2 × 2,3 = <input type="text" id="ex18_4"></div>
+            <div class="exercise">5. 5,3 × 1,8 = <input type="text" id="ex18_5"></div>
+            <div class="exercise">6. Estime, puis résous : 6,2 × 2,9 = <input type="text" id="ex18_6"></div>
+            <div class="exercise">7. 0,9 × 1,5 = <input type="text" id="ex18_7"></div>
+            <div class="exercise">8. 7,4 × 0,6 = <input type="text" id="ex18_8"></div>
+            <div class="exercise">9. Un crayon coûte 3,00 $. Combien coûtent 4,2 crayons ? <input type="text" id="ex18_9"></div>
+            <div class="exercise">10. Estime, puis résous : 6,5 × 2,2 = <input type="text" id="ex18_10"></div>
+        </div>
+
+        <!-- Section 20: Mesure de l'aire d'une surface -->
+        <div class="section">
+            <h2>Section 20 : Mesure de l'aire d'une surface</h2>
+            <p>Calcule l'aire en cm² en utilisant longueur × largeur.</p>
+            <div class="exercise">1. Rectangle : Longueur = 7 cm, Largeur = 4 cm</div>
+            <div class="exercise">2. Carré : Côté = 6 cm</div>
+            <div class="exercise">3. Rectangle : Longueur = 9 cm, Largeur = 3,5 cm</div>
+            <div class="exercise">4. Carré : Côté = 5 cm</div>
+            <div class="exercise">5. Rectangle : Longueur = 8 cm, Largeur = 6 cm</div>
+            <div class="exercise">6. Rectangle : Longueur = 4 cm, Largeur = 3 cm</div>
+            <div class="exercise">7. Carré : Côté = 2 cm</div>
+            <div class="exercise">8. Rectangle : Longueur = 6 cm, Largeur = 2,5 cm</div>
+            <div class="exercise">9. Une carte mesure 12 cm de long et 5 cm de large. Quelle est son aire ?</div>
+            <div class="exercise">10. Carré : Côté = 7 cm</div>
+        </div>
+
+        <button id="submitButton">Soumettre</button>
+        <div id="score-container"></div>
     </div>
 
     <footer>
-        <p>© 2025 Exercices Interactifs. Tous droits réservés.</p>
+        <p>&copy; 2025 Ensemble d'Exercices - Mathématiques. Tous droits réservés.</p>
     </footer>
 
     <script>
-       const answers = {
-            // Section 1 : Addition et Soustraction
-            s1_1: 23,
-            s1_2: 11,
-            s1_3: 26,
-            s1_4: 16,
-            s1_5: 30,
-            s1_6: 25,
-            s1_7: 40,
-            s1_8: 21,
-            s1_9: 41,
-            s1_10: 35,
-
-            // Section 2 : Multiplication et Division
-            s2_1: 24,
-            s2_2: 5,
-            s2_3: 24,
-            s2_4: 6,
-            s2_5: 45,
-            s2_6: 5,
-            s2_7: 42,
-            s2_8: 7,
-            s2_9: 44,
-            s2_10: 9,
-
-            // Section 3 : Fractions
-            s3_1: 1,
-            s3_2: 0.5,  // 1/2
-            s3_3: 0.9,  // 9/10
-            s3_4: 0.5,  // 1/2
-            s3_5: 0.625, // 5/8
-            s3_6: 0.375, // 3/8
-            s3_7: 0.833, // 5/6
-            s3_8: 0.6,  // 3/5
-            s3_9: 1,
-            s3_10: 0.4, // 2/5
-
-            // Section 4 : Algèbre de base
-            s4_1: 5,
-            s4_2: 13,
-            s4_3: 6,
-            s4_4: 18,
-            s4_5: 4,
-            s4_6: 4,
-            s4_7: 12,
-            s4_8: 6,
-            s4_9: 6,
-            s4_10: 16,
-
-            // Section 5 : Géométrie de base
-            s5_1: 24,
-            s5_2: 20,
-            s5_3: 24,
-            s5_4: 25.12, // 2 * pi * 4
-            s5_5: 30,
-            s5_6: 28,
-            s5_7: 30,
-            s5_8: 12.56, // 2 * pi * 2
-            s5_9: 44,
-            s5_10: 36
-        };
-
-        function checkAll() {
-            let correctCount = 0;
-            for (const [id, correctAnswer] of Object.entries(answers)) {
-                const input = document.getElementById(id);
-                const feedback = input.nextElementSibling;
-                const userAnswer = input.value.trim().replace(',', '.').toLowerCase();
-
-                if (typeof correctAnswer === 'number') {
-                    const numAnswer = parseFloat(userAnswer);
-                    if (!isNaN(numAnswer) && Math.abs(numAnswer - correctAnswer) < 0.01) {
-                        feedback.textContent = "Correct ! ✔️";
-                        feedback.className = "feedback correct";
-                        correctCount++;
-                    } else {
-                        feedback.textContent = `Incorrect. Réponse: ${correctAnswer}`;
-                        feedback.className = "feedback incorrect";
-                    }
-                } else {
-                    if (userAnswer === correctAnswer.toLowerCase()) {
-                        feedback.textContent = "Correct ! ✔️";
-                        feedback.className = "feedback correct";
-                        correctCount++;
-                    } else {
-                        feedback.textContent = `Incorrect. Réponse: ${correctAnswer}`;
-                        feedback.className = "feedback incorrect";
-                    }
-                }
-            }
-
-            const totalQuestions = Object.keys(answers).length;
-            const score = Math.round((correctCount / totalQuestions) * 100);
-            const scoreContainer = document.getElementById('score-container');
-            scoreContainer.textContent = `Votre score : ${score} / 100`;
-
-            const prizeMessage = document.getElementById('prize-message');
-            if (score > 85) {
-                prizeMessage.textContent = "Félicitations ! Vous avez gagné un prix !";
-            } else {
-                prizeMessage.textContent = "";
-            }
-        }
+        // Ajoute la logique de validation des réponses ici
     </script>
 </body>
 </html>
