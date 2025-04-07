@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ensemble d'Exercices - Mathématiques</title>
+    <title>Ensemble d'Exercices - Mathématiques (5e année)</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -23,12 +23,14 @@
         }
 
         .section {
-            margin-bottom: 30px;
+            margin: 20px auto;
             padding: 20px;
             background-color: #fff;
             border: 1px solid #ddd;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            width: 80%;
+            max-width: 800px;
         }
 
         .exercise {
@@ -36,6 +38,9 @@
             padding: 15px;
             background-color: #f9f9f9;
             border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
         input {
@@ -59,11 +64,10 @@
             color: white;
             border: none;
             cursor: pointer;
-            margin: 20px auto 0 auto;
+            margin: 20px auto;
             border-radius: 5px;
             transition: background-color 0.3s ease;
             display: block;
-            text-align: center;
         }
 
         button:hover {
@@ -71,7 +75,6 @@
         }
 
         .feedback {
-            display: inline-block;
             margin-left: 15px;
             padding: 5px 10px;
             border-radius: 4px;
@@ -109,7 +112,7 @@
             color: white;
             text-align: center;
             padding: 15px;
-            margin-top: 20px;
+            margin-top: auto;
             border-top: 1px solid #2c3e50;
         }
     </style>
@@ -122,76 +125,219 @@
         <div class="section">
             <h2>Section 16 : Chaînes d'opérations et ordre des opérations</h2>
             <p>Utilise la règle PEMDAS pour résoudre. Montre tes étapes !</p>
-            <div class="exercise">1. 7 + (3 × 5) − 6 = <input type="text" id="ex16_1"></div>
-            <div class="exercise">2. 15 − 4 × (3 + 2) = <input type="text" id="ex16_2"></div>
-            <div class="exercise">3. (12 + 4) ÷ 4 + 8 = <input type="text" id="ex16_3"></div>
-            <div class="exercise">4. 9 × 2 − 20 ÷ 4 = <input type="text" id="ex16_4"></div>
-            <div class="exercise">5. (5 × 3 + 2) − 8 = <input type="text" id="ex16_5"></div>
-            <div class="exercise">6. 24 ÷ (4 + 3) × 5 = <input type="text" id="ex16_6"></div>
-            <div class="exercise">7. 9 + 4 × (5 − 2) = <input type="text" id="ex16_7"></div>
-            <div class="exercise">8. 12 − 6 × 3 + 18 ÷ 9 = <input type="text" id="ex16_8"></div>
-            <div class="exercise">9. (20 ÷ 5 + 3) × 4 = <input type="text" id="ex16_9"></div>
-            <div class="exercise">10. 8 × (4 + 3) − 15 ÷ 5 = <input type="text" id="ex16_10"></div>
+            <div class="exercise">1. 7 + (3 × 5) − 6 = <input type="text" id="ex16_1" data-section="16"></div>
+            <div class="exercise">2. 15 − 4 × (3 + 2) = <input type="text" id="ex16_2" data-section="16"></div>
+            <div class="exercise">3. (12 + 4) ÷ 4 + 8 = <input type="text" id="ex16_3" data-section="16"></div>
+            <div class="exercise">4. 9 × 2 − 20 ÷ 4 = <input type="text" id="ex16_4" data-section="16"></div>
+            <div class="exercise">5. (5 × 3 + 2) − 8 = <input type="text" id="ex16_5" data-section="16"></div>
+            <div class="exercise">6. 24 ÷ (4 + 3) × 5 = <input type="text" id="ex16_6" data-section="16"></div>
+            <div class="exercise">7. 9 + 4 × (5 − 2) = <input type="text" id="ex16_7" data-section="16"></div>
+            <div class="exercise">8. 12 − 6 × 3 + 18 ÷ 9 = <input type="text" id="ex16_8" data-section="16"></div>
+            <div class="exercise">9. (20 ÷ 5 + 3) × 4 = <input type="text" id="ex16_9" data-section="16"></div>
+            <div class="exercise">10. 8 × (4 + 3) − 15 ÷ 5 = <input type="text" id="ex16_10" data-section="16"></div>
         </div>
 
         <!-- Section 17: Associativité, Commutativité, Propriété Distributive -->
         <div class="section">
             <h2>Section 17 : Associativité, Commutativité et Propriété Distributive</h2>
             <p>Identifie ou applique les propriétés demandées.</p>
-            <div class="exercise">1. Réécris en utilisant la propriété distributive : 6 × (5 + 3) = <input type="text" id="ex17_1"></div>
-            <div class="exercise">2. Montre la propriété commutative : 6 + 4 + 2 = ___ + ___ + ___</div>
-            <div class="exercise">3. Utilise la propriété associative : (3 × 4) × 2 = ___ × (___ × ___)</div>
-            <div class="exercise">4. 5 × (6 + 7) = (___ × ) + ( × ___)</div>
-            <div class="exercise">5. 14 + 7 + 10 = ___ + ___ + ___ (réorganise)</div>
-            <div class="exercise">6. (8 × 3) × 6 = ___ × (___ × ___)</div>
-            <div class="exercise">7. 5 × (9 − 4) = (___ × ) − ( × ___)</div>
-            <div class="exercise">8. Identifie : (6 + 7) + 3 = 6 + (7 + 3) (Quelle propriété ?)</div>
-            <div class="exercise">9. Identifie : 4 × 7 × 5 = 7 × 5 × 4 (Quelle propriété ?)</div>
-            <div class="exercise">10. 3 × (8 + 5) = (___ × ) + ( × ___) =</div>
+            <div class="exercise">1. Réécris en utilisant la propriété distributive : 6 × (5 + 3) = <input type="text" id="ex17_1" data-section="17"></div>
+            <div class="exercise">2. Montre la propriété commutative : 6 + 4 + 2 = <input type="text" id="ex17_2" data-section="17" placeholder="___ + ___ + ___"></div>
+            <div class="exercise">3. Utilise la propriété associative : (3 × 4) × 2 = <input type="text" id="ex17_3" data-section="17" placeholder="___ × (___ × ___)"></div>
+            <div class="exercise">4. 5 × (6 + 7) = <input type="text" id="ex17_4" data-section="17" placeholder="(___ × ___) + (___ × ___)"></div>
+            <div class="exercise">5. 14 + 7 + 10 = <input type="text" id="ex17_5" data-section="17" placeholder="___ + ___ + ___ (réorganise)"></div>
+            <div class="exercise">6. (8 × 3) × 6 = <input type="text" id="ex17_6" data-section="17" placeholder="___ × (___ × ___)"></div>
+            <div class="exercise">7. 5 × (9 − 4) = <input type="text" id="ex17_7" data-section="17" placeholder="(___ × ___) − (___ × ___)"></div>
+            <div class="exercise">8. Identifie : (6 + 7) + 3 = 6 + (7 + 3) <input type="text" id="ex17_8" data-section="17" placeholder="Quelle propriété ?"></div>
+            <div class="exercise">9. Identifie : 4 × 7 × 5 = 7 × 5 × 4 <input type="text" id="ex17_9" data-section="17" placeholder="Quelle propriété ?"></div>
+            <div class="exercise">10. 3 × (8 + 5) = <input type="text" id="ex17_10" data-section="17" placeholder="(___ × ___) + (___ × ___)"></div>
         </div>
 
         <!-- Section 18: Multiplication des nombres décimaux -->
         <div class="section">
             <h2>Section 18 : Multiplication des nombres décimaux</h2>
             <p>Multiplie, puis place la virgule selon le nombre total de chiffres après la virgule. Estime d’abord si demandé.</p>
-            <div class="exercise">1. 4,1 × 3,2 = <input type="text" id="ex18_1"></div>
-            <div class="exercise">2. 1,8 × 3,4 = <input type="text" id="ex18_2"></div>
-            <div class="exercise">3. 0,6 × 0,9 = <input type="text" id="ex18_3"></div>
-            <div class="exercise">4. 7,2 × 2,3 = <input type="text" id="ex18_4"></div>
-            <div class="exercise">5. 5,3 × 1,8 = <input type="text" id="ex18_5"></div>
-            <div class="exercise">6. Estime, puis résous : 6,2 × 2,9 = <input type="text" id="ex18_6"></div>
-            <div class="exercise">7. 0,9 × 1,5 = <input type="text" id="ex18_7"></div>
-            <div class="exercise">8. 7,4 × 0,6 = <input type="text" id="ex18_8"></div>
-            <div class="exercise">9. Un crayon coûte 3,00 $. Combien coûtent 4,2 crayons ? <input type="text" id="ex18_9"></div>
-            <div class="exercise">10. Estime, puis résous : 6,5 × 2,2 = <input type="text" id="ex18_10"></div>
+            <div class="exercise">1. 4,1 × 3,2 = <input type="text" id="ex18_1" data-section="18"></div>
+            <div class="exercise">2. 1,8 × 3,4 = <input type="text" id="ex18_2" data-section="18"></div>
+            <div class="exercise">3. 0,6 × 0,9 = <input type="text" id="ex18_3" data-section="18"></div>
+            <div class="exercise">4. 7,2 × 2,3 = <input type="text" id="ex18_4" data-section="18"></div>
+            <div class="exercise">5. 5,3 × 1,8 = <input type="text" id="ex18_5" data-section="18"></div>
+            <div class="exercise">6. Estime, puis résous : 6,2 × 2,9 = <input type="text" id="ex18_6" data-section="18"></div>
+            <div class="exercise">7. 0,9 × 1,5 = <input type="text" id="ex18_7" data-section="18"></div>
+            <div class="exercise">8. 7,4 × 0,6 = <input type="text" id="ex18_8" data-section="18"></div>
+            <div class="exercise">9. Un crayon coûte 3,00 $. Combien coûtent 4,2 crayons ? <input type="text" id="ex18_9" data-section="18"></div>
+            <div class="exercise">10. Estime, puis résous : 6,5 × 2,2 = <input type="text" id="ex18_10" data-section="18"></div>
+        </div>
+
+        <!-- Section 19: La priorité des opérations fondamentales -->
+        <div class="section">
+            <h2>Section 19 : La priorité des opérations fondamentales</h2>
+            <p>Applique la règle PEMDAS (Parenthèses, puis Multiplication/Division, puis Addition/Soustraction) pour résoudre.</p>
+            <div class="exercise">1. 3 + 4 × 5 = <input type="text" id="ex19_1" data-section="19"></div>
+            <div class="exercise">2. 15 − 6 ÷ 3 = <input type="text" id="ex19_2" data-section="19"></div>
+            <div class="exercise">3. 5 + 3 × 4 − 2 = <input type="text" id="ex19_3" data-section="19"></div>
+            <div class="exercise">4. 10 ÷ 2 + 8 × 3 = <input type="text" id="ex19_4" data-section="19"></div>
+            <div class="exercise">5. 7 × (4 − 2) + 6 = <input type="text" id="ex19_5" data-section="19"></div>
+            <div class="exercise">6. 20 − 8 ÷ 4 × 2 = <input type="text" id="ex19_6" data-section="19"></div>
+            <div class="exercise">7. 9 + 6 ÷ 3 − 5 = <input type="text" id="ex19_7" data-section="19"></div>
+            <div class="exercise">8. 4 × 3 + 16 ÷ 8 = <input type="text" id="ex19_8" data-section="19"></div>
+            <div class="exercise">9. 18 − 4 × 2 + 6 ÷ 3 = <input type="text" id="ex19_9" data-section="19"></div>
+            <div class="exercise">10. 12 ÷ (3 + 1) × 5 = <input type="text" id="ex19_10" data-section="19"></div>
         </div>
 
         <!-- Section 20: Mesure de l'aire d'une surface -->
         <div class="section">
             <h2>Section 20 : Mesure de l'aire d'une surface</h2>
             <p>Calcule l'aire en cm² en utilisant longueur × largeur.</p>
-            <div class="exercise">1. Rectangle : Longueur = 7 cm, Largeur = 4 cm</div>
-            <div class="exercise">2. Carré : Côté = 6 cm</div>
-            <div class="exercise">3. Rectangle : Longueur = 9 cm, Largeur = 3,5 cm</div>
-            <div class="exercise">4. Carré : Côté = 5 cm</div>
-            <div class="exercise">5. Rectangle : Longueur = 8 cm, Largeur = 6 cm</div>
-            <div class="exercise">6. Rectangle : Longueur = 4 cm, Largeur = 3 cm</div>
-            <div class="exercise">7. Carré : Côté = 2 cm</div>
-            <div class="exercise">8. Rectangle : Longueur = 6 cm, Largeur = 2,5 cm</div>
-            <div class="exercise">9. Une carte mesure 12 cm de long et 5 cm de large. Quelle est son aire ?</div>
-            <div class="exercise">10. Carré : Côté = 7 cm</div>
+            <div class="exercise">1. Rectangle : Longueur = 7 cm, Largeur = 4 cm, Aire = <input type="text" id="ex20_1" data-section="20"></div>
+            <div class="exercise">2. Carré : Côté = 6 cm, Aire = <input type="text" id="ex20_2" data-section="20"></div>
+            <div class="exercise">3. Rectangle : Longueur = 9 cm, Largeur = 3,5 cm, Aire = <input type="text" id="ex20_3" data-section="20"></div>
+            <div class="exercise">4. Carré : Côté = 5 cm, Aire = <input type="text" id="ex20_4" data-section="20"></div>
+            <div class="exercise">5. Rectangle : Longueur = 8 cm, Largeur = 6 cm, Aire = <input type="text" id="ex20_5" data-section="20"></div>
+            <div class="exercise">6. Rectangle : Longueur = 4 cm, Largeur = 3 cm, Aire = <input type="text" id="ex20_6" data-section="20"></div>
+            <div class="exercise">7. Carré : Côté = 2 cm, Aire = <input type="text" id="ex20_7" data-section="20"></div>
+            <div class="exercise">8. Rectangle : Longueur = 6 cm, Largeur = 2,5 cm, Aire = <input type="text" id="ex20_8" data-section="20"></div>
+            <div class="exercise">9. Une carte mesure 12 cm de long et 5 cm de large. Quelle est son aire ? <input type="text" id="ex20_9" data-section="20"></div>
+            <div class="exercise">10. Carré : Côté = 7 cm, Aire = <input type="text" id="ex20_10" data-section="20"></div>
         </div>
 
-        <button id="submitButton">Soumettre</button>
+        <button id="submitButton">Voir le score final</button>
         <div id="score-container"></div>
     </div>
 
     <footer>
-        <p>&copy; 2025 Ensemble d'Exercices - Mathématiques. Tous droits réservés.</p>
+        <p>© 2025 Ensemble d'Exercices - Mathématiques. Tous droits réservés.</p>
     </footer>
 
     <script>
-        // Ajoute la logique de validation des réponses ici
+        // Correct answers
+        const answers = {
+            // Section 16: Order of Operations
+            ex16_1: "16",
+            ex16_2: "-5",
+            ex16_3: "12",
+            ex16_4: "13",
+            ex16_5: "9",
+            ex16_6: "120/7", // or "17.14" depending on expected format
+            ex16_7: "21",
+            ex16_8: "-4",
+            ex16_9: "28",
+            ex16_10: "53",
+
+            // Section 17: Associativity, Commutativity, Distributive Property
+            ex17_1: "(6 × 5) + (6 × 3)",
+            ex17_2: "2 + 4 + 6",
+            ex17_3: "3 × (4 × 2)",
+            ex17_4: "(5 × 6) + (5 × 7)",
+            ex17_5: "10 + 7 + 14",
+            ex17_6: "8 × (3 × 6)",
+            ex17_7: "(5 × 9) - (5 × 4)",
+            ex17_8: "associative",
+            ex17_9: "commutative",
+            ex17_10: "(3 × 8) + (3 × 5)",
+
+            // Section 18: Multiplication of Decimals
+            ex18_1: "13.12",
+            ex18_2: "6.12",
+            ex18_3: "0.54",
+            ex18_4: "16.56",
+            ex18_5: "9.54",
+            ex18_6: "17.98",
+            ex18_7: "1.35",
+            ex18_8: "4.44",
+            ex18_9: "12.60",
+            ex18_10: "14.30",
+
+            // Section 19: Priority of Operations
+            ex19_1: "23",
+            ex19_2: "13",
+            ex19_3: "15",
+            ex19_4: "29",
+            ex19_5: "20",
+            ex19_6: "16",
+            ex19_7: "6",
+            ex19_8: "14",
+            ex19_9: "12",
+            ex19_10: "15",
+
+            // Section 20: Area Calculations
+            ex20_1: "28",
+            ex20_2: "36",
+            ex20_3: "31.5",
+            ex20_4: "25",
+            ex20_5: "48",
+            ex20_6: "12",
+            ex20_7: "4",
+            ex20_8: "15",
+            ex20_9: "60",
+            ex20_10: "49"
+        };
+
+        const totalExercises = 50; // 10 exercises per section, 5 sections
+        let score = 0;
+        const answeredQuestions = new Set(); // Track which questions have been answered correctly
+
+        // Function to validate a single input
+        function validateInput(input) {
+            const id = input.id;
+            const userAnswer = input.value.trim().toLowerCase();
+            const correctAnswer = answers[id];
+            const feedback = document.createElement("span");
+            feedback.className = "feedback";
+
+            // Remove any previous feedback
+            const existingFeedback = input.nextElementSibling;
+            if (existingFeedback && existingFeedback.className.includes("feedback")) {
+                existingFeedback.remove();
+            }
+
+            // Check if the question was previously answered correctly
+            const wasCorrect = answeredQuestions.has(id);
+
+            if (userAnswer === correctAnswer) {
+                feedback.classList.add("correct");
+                feedback.textContent = "Correct!";
+                if (!wasCorrect) {
+                    score++;
+                    answeredQuestions.add(id);
+                }
+            } else {
+                feedback.classList.add("incorrect");
+                feedback.textContent = `Incorrect. La réponse correcte est ${correctAnswer}.`;
+                if (wasCorrect) {
+                    score--;
+                    answeredQuestions.delete(id);
+                }
+            }
+
+            input.insertAdjacentElement("afterend", feedback);
+
+            // Update the score display
+            const scoreContainer = document.getElementById("score-container");
+            scoreContainer.textContent = `Votre score : ${score} / ${totalExercises}`;
+        }
+
+        // Add event listeners to all input fields
+        document.querySelectorAll('input[type="text"]').forEach(input => {
+            input.addEventListener('blur', function() {
+                if (this.value.trim() !== "") { // Only validate if the input is not empty
+                    validateInput(this);
+                }
+            });
+
+            // Allow validation on pressing Enter
+            input.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter' && this.value.trim() !== "") {
+                    validateInput(this);
+                }
+            });
+        });
+
+        // Submit button to show final score (optional, since validation is now real-time)
+        document.getElementById("submitButton").addEventListener("click", function() {
+            const scoreContainer = document.getElementById("score-container");
+            scoreContainer.textContent = `Votre score final : ${score} / ${totalExercises}`;
+        });
     </script>
 </body>
 </html>
