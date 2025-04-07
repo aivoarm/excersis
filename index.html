@@ -14,6 +14,7 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            position: relative;
         }
 
         h1 {
@@ -115,9 +116,22 @@
             margin-top: auto;
             border-top: 1px solid #2c3e50;
         }
+
+        #confetti-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none; /* Allows clicks to pass through the canvas */
+            z-index: 1000;
+        }
     </style>
 </head>
 <body>
+    <!-- Canvas for confetti animation -->
+    <canvas id="confetti-canvas"></canvas>
+
     <h1>Ensemble d'Exercices - Mathématiques (5e année)</h1>
 
     <div class="container">
@@ -277,6 +291,71 @@
         let score = 0;
         const answeredQuestions = new Set(); // Track which questions have been answered correctly
 
+        // Confetti Animation Setup
+        const canvas = document.getElementById("confetti-canvas");
+        const ctx = canvas.getContext("2d");
+        let confettiParticles = [];
+
+        // Set canvas size
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        window.addEventListener("resize", resizeCanvas);
+        resizeCanvas();
+
+        // Confetti Particle Class
+        class ConfettiParticle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height - canvas.height; // Start above the canvas
+                this.size = Math.random() * 5 + 2;
+                this.speedX = Math.random() * 3 - 1.5;
+                this.speedY = Math.random() * 5 + 2;
+                this.color = `hsl(${Math.random() * 360}, 100%, 50%)`; // Random color
+                this.life = 100; // Frames the particle will live
+            }
+
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                this.life--;
+
+                // Add some gravity and wind effect
+                this.speedY += 0.05; // Gravity
+                this.speedX += Math.random() * 0.2 - 0.1; // Wind
+            }
+
+            draw() {
+                ctx.fillStyle = this.color;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        // Function to create confetti burst
+        function createConfettiBurst() {
+            for (let i = 0; i < 50; i++) {
+                confettiParticles.push(new ConfettiParticle());
+            }
+        }
+
+        // Animation loop for confetti
+        function animateConfetti() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            confettiParticles = confettiParticles.filter(particle => particle.life > 0);
+
+            for (let particle of confettiParticles) {
+                particle.update();
+                particle.draw();
+            }
+
+            if (confettiParticles.length > 0) {
+                requestAnimationFrame(animateConfetti);
+            }
+        }
+
         // Function to validate a single input
         function validateInput(input) {
             const id = input.id;
@@ -300,6 +379,9 @@
                 if (!wasCorrect) {
                     score++;
                     answeredQuestions.add(id);
+                    // Trigger confetti animation for correct answer
+                    createConfettiBurst();
+                    animateConfetti();
                 }
             } else {
                 feedback.classList.add("incorrect");
